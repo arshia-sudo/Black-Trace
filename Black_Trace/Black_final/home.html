@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Invoice Detection</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #3e015a, #000508);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #230121;
+            color: rgb(225, 216, 226);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 42px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family:Pacifico;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0d0000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .container {
+            flex: 1;
+            border-radius: 90px;
+            text-align: center;
+            margin: 30px auto;
+            position: relative;
+            box-sizing: border-box;
+            width: 520px;
+            background: rgba(47, 0, 69, 0.337);
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(9px);
+            padding: 30px 40px;
+            font-size:20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #c489e2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .tagline {
+            font-size: 32px;
+            font-weight: bold;
+            color: #b3dab5;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #c0baba;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            padding: 14px 35px;
+            background-color: #3a0145;
+            color: white;
+            font-size: 20px;
+            border: solid 2px rgb(132, 128, 138);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #7307c7;
+            transform: scale(1.05);
+        }
+
+        .cta-button:active {
+            background-color: #388e3c;
+            transform: scale(1);
+        }
+
+        .cta-button:focus {
+            outline: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0f0112;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        BlackTrace
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="feature.html">Features</a></li>
+            <li><a href="benefit.html">Benefits</a></li>
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="organization.html">Organizations</a></li>
+            <li><a href="registration.html">Register</a></li> <!-- Register link added here -->
+        </ul>
+    </nav>
+
+    <!-- Homepage Section -->
+    <div class="container">
+        <h1>Fake Invoice Detection</h1>
+        <p class="tagline">Detect Fake Invoices with Ease</p>
+        <p class="intro">
+            In today's world, fake invoices can be a major threat to businesses. Our Fake Invoice Detection Tool helps you instantly check whether an invoice is legitimate or not. Protect your business from fraud with just a few clicks.
+        </p>
+        <a href="invoice-form.html">
+            <button class="cta-button">Try the Invoice Detection Tool for Free!</button>
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Fake Invoice Detection. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

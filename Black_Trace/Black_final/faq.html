@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Detection - FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c; /* Dark background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #e0b3ff; /* Light purple */
+        }
+
+        .faq-section {
+            background-color: #2c2c2c; /* Darker background for sections */
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 22px;
+            color: #9b4dff; /* Purple */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item h3:hover {
+            color: #7a32b0; /* Darker purple */
+        }
+
+        .faq-answer {
+            display: none;
+            font-size: 16px;
+            color: #bbb; /* Lighter text */
+            line-height: 1.6;
+            padding-top: 10px;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .cta-button {
+            padding: 12px 25px;
+            background-color: #9b4dff; /* Purple */
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #7a32b0; /* Darker purple */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c2c2c; /* Dark background */
+            color: white;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-button {
+            padding: 12px 25px;
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #555; /* Lighter gray */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+
+        <!-- FAQ Section: Common Questions -->
+        <div class="faq-section">
+            <h2>Common Questions</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq1')">1. What is the Invoice Detection Tool?</h3>
+                <div id="faq1" class="faq-answer">
+                    <p>The Invoice Detection Tool is an automated software solution designed to validate and verify the authenticity of invoices. It checks the invoice number, format, date, and other key elements to help identify any fraudulent or duplicate invoices.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq2')">2. How does the Invoice Detection Tool work?</h3>
+                <div id="faq2" class="faq-answer">
+                    <p>The tool scans invoices in real-time and validates their details, such as invoice numbers, dates, and formats. If an invoice is incorrect, it sends an alert, helping users detect fraudulent or invalid invoices.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq3')">3. What types of invoices can be processed?</h3>
+                <div id="faq3" class="faq-answer">
+                    <p>The Invoice Detection Tool can process most common invoice formats, including PDF, Word, and image files. It checks for proper invoice formatting and validates the contents according to predefined business standards.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq4')">4. Is the tool suitable for small businesses?</h3>
+                <div id="faq4" class="faq-answer">
+                    <p>Yes! The Invoice Detection Tool is designed to be easy-to-use and scalable for businesses of all sizes, from small startups to large enterprises. It helps automate the invoice verification process, saving time and preventing fraud.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section: Technical Support -->
+        <div class="faq-section">
+            <h2>Technical Support</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq5')">1. How do I integrate the Invoice Detection Tool with my system?</h3>
+                <div id="faq5" class="faq-answer">
+                    <p>The Invoice Detection Tool provides API documentation and integration guides for seamless integration with your existing invoicing system. You can find detailed instructions in our Developer Section or contact our support team for help.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq6')">2. What should I do if the tool isn't detecting an invoice correctly?</h3>
+                <div id="faq6" class="faq-answer">
+                    <p>If the tool is not detecting an invoice correctly, ensure that the invoice is in an acceptable format. If the issue persists, contact our support team. We can investigate the issue and assist you with troubleshooting.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq7')">3. How can I contact technical support?</h3>
+                <div id="faq7" class="faq-answer">
+                    <p>You can contact our technical support team by submitting a ticket through the support page or emailing us directly at support@invoicedetection.com. Our team is available 24/7 to assist with any issues.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleAnswer('faq8')">4. Is there a user guide for using the tool?</h3>
+                <div id="faq8" class="faq-answer">
+                    <p>Yes, we provide a comprehensive user guide and video tutorials to help you understand how to use the Invoice Detection Tool. You can find the user guide in the Help Section of the website.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Button -->
+        <a href="invoice-form.html" class="cta-button">Try it Now!</a>
+
+        <!-- Back to Homepage Button -->
+        <a href="home.html" class="back-button">Back to Homepage</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Invoice Detection Tool | All rights reserved by Ayushi, Arshia, Jannat, Tanmay, Kruthika, Sakshi.</p>
+    </footer>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        function toggleAnswer(faqId) {
+            var answer = document.getElementById(faqId);
+            if (answer.classList.contains("show")) {
+                answer.classList.remove("show");
+            } else {
+                answer.classList.add("show");
+            }
+        }
+    </script>
+</body>
+</html>

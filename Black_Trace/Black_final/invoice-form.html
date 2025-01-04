@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Detection</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      background: url(ai.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background: linear-gradient(to bottom, #3e015a, #000508);
+
+    }
+
+    .container {
+        
+      background: linear-gradient(to bottom,  #3e015a, #000508);
+      width: 420px;
+      border: 2px solid rgba(255, 255, 255, .2);
+      backdrop-filter: blur(9px);
+      color: #fff;
+      border-radius: 12px;
+      padding:30px 40px;
+      font-size: 19px;
+      margin: auto;
+    }
+     #invoice-form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"] {
+            padding: 8px;
+            margin: 10px;
+            width: 200px;
+            font-size: 16px;
+            border-radius:10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6e0c79;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #06df119e;
+            justify-content:center;
+        }
+
+        #detection-result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .valid {
+            color: rgb(8, 221, 8);
+        }
+
+        .fake {
+            color: red;
+        }
+        header {
+            color: rgb(214, 152, 221);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 50px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family:Pacifico;
+        }
+    </style>
+</head>
+<body>
+
+    <header>BlackTrace</header>
+    <div class="container">
+        <h1>Invoice Detection</h1><br>
+        <form id="invoice-form">
+            <label for="invoice-number">Invoice Number:</label><br>
+            <input type="text" id="invoice-number" placeholder="Example: INV12345" required><br>
+
+            <label for="invoice-date">Invoice Date:</label><br>
+            <input type="date" id="invoice-date" required><br>
+
+            <label for="total-amount">Total Amount:</label><br>
+            <input type="number" id="total-amount" placeholder="Example: 1000" required><br>
+
+            <br><button type="submit">Check Invoice</button>
+            <a href="home.html" class="back-button">Back to Homepage</a>
+
+        </form>
+
+        <div id="detection-result"></div>
+    </div>
+
+    <script>
+        // Array to store previously used invoice numbers
+        const usedInvoiceNumbers = [];
+
+        // Listen for the form submission
+        document.getElementById('invoice-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get the form values
+            const invoiceNumber = document.getElementById('invoice-number').value;
+            const invoiceDate = new Date(document.getElementById('invoice-date').value);
+            const totalAmount = parseFloat(document.getElementById('total-amount').value);
+
+            // Validate and check if the invoice is fake
+            const result = checkIfFakeInvoice(invoiceNumber, invoiceDate, totalAmount);
+
+            // Display the result
+            const resultDiv = document.getElementById('detection-result');
+            if (result.isFake) {
+                resultDiv.textContent = result.message;
+                resultDiv.className = 'fake';
+            } else {
+                resultDiv.textContent = "Valid Invoice.";
+                resultDiv.className = 'valid';
+                // Store the valid invoice number
+                usedInvoiceNumbers.push(invoiceNumber);
+            }
+        });
+
+        // Function to check if the invoice is fake based on certain rules
+        function checkIfFakeInvoice(invoiceNumber, invoiceDate, totalAmount) {
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            let isFake = false;
+            let message = '';
+
+            
+            // Rule 1: Check if the invoice number is a duplicate
+            if (usedInvoiceNumbers.includes(invoiceNumber)) {
+                isFake = true;
+                message = "Duplicate Invoice Number! This invoice number has already been used.";
+            }
+
+            // Rule 2: Invoice number should start with 'INV' followed by numbers only
+            if (!invoiceNumber.startsWith("INV") || isNaN(invoiceNumber.substring(3))) {
+                isFake = true;
+                message = "Invalid Invoice Number! It must start with 'INV' followed by numbers.";
+            }
+
+            // Rule 3: Invoice date's year should not be in the future
+            const invoiceYear = invoiceDate.getFullYear();
+            if (invoiceYear > currentYear) {
+                isFake = true;
+                message = "Invalid Invoice Date! The year of the invoice cannot be in the future.";
+            }
+
+            // Rule 4: Total amount should be within reasonable range
+            if (totalAmount < 1 || totalAmount > 100000) {
+                isFake = true;
+                message = "Invalid Total Amount! It should be between 1 and 100,000.";
+            }
+
+            // Rule 5: Check for duplicate invoice numbers (already handled by the array above)
+
+            // Rule 6: Invoice format should follow a certain structure (checking for missing fields and correct date format)
+            const invoiceNumberPattern = /^INV\d+$/;
+            if (!invoiceNumberPattern.test(invoiceNumber)) {
+                isFake = true;
+                message = "Invalid Invoice Number Format! It should be in the format 'INV' followed by numbers.";
+            }
+
+            // Rule 7: Check for suspiciously high or low amounts (only two decimal places allowed)
+            if (totalAmount % 1 !== 0 && totalAmount.toString().split('.')[1].length > 2) {
+                isFake = true;
+                message = "Invalid Total Amount format! Only two decimal places allowed.";
+            }
+
+            // If the invoice is valid, consider it valid
+            if (!isFake) {
+                message = "Valid Invoice.";
+            }
+
+            return { isFake, message };
+        }
+    </script>
+</body>
+</html>    

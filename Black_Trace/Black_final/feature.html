@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Detection - Features</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #3e015a, #000508);
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+            
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #e9e4e4;
+        }
+
+        .feature-box {
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.8s ease;
+            text-align: center;
+            margin: 30px auto;
+            position: relative;
+            box-sizing: border-box;
+            width: 900px;
+            background: rgb(34, 1, 56);
+            border: 2px solid rgba(87, 3, 124, 0.84);
+            font-size:20px;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box h2 {
+            font-size: 28px;
+            color: #4CAF50;
+        }
+
+        .feature-box p {
+            font-size: 16px;
+            color: #f0e1e1;
+            line-height: 1.6;
+        }
+
+        .feature-box .feature-icon {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            padding: 12px 25px;
+            background-color: #8b2389;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .back-button {
+            padding: 12px 25px;
+            background-color: #ccc;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #bbb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Features of Invoice Detection Tool</h1>
+
+        <!-- Feature 1: User-Friendly Interface -->
+        <div class="feature-box">
+            <div class="feature-icon">📱</div>
+            <h2>User-Friendly Interface</h2>
+            <p>Our invoice detection tool has a simple, intuitive, and easy-to-use interface, ensuring that you can check invoices without hassle. You don’t need technical skills to use it; just input your invoice details and receive instant results!</p>
+        </div>
+
+        <!-- Feature 2: Real-Time Results -->
+        <div class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h2>Real-Time Results</h2>
+            <p>Get instant feedback on the validity of your invoice. Our system processes and analyzes your invoice in real time, providing you with immediate results and making the detection process quicker than ever.</p>
+        </div>
+
+        <!-- Feature 3: Alert System -->
+        <div class="feature-box">
+            <div class="feature-icon">🔔</div>
+            <h2>Alert System</h2>
+            <p>Our tool comes with a built-in alert system that notifies you if the invoice you are checking is fake or invalid. Whether it’s a duplicate invoice or an incorrectly formatted invoice, you’ll know right away.</p>
+        </div>
+
+        <!-- Feature 4: Invoice Number Validation -->
+        <div class="feature-box">
+            <div class="feature-icon">🔢</div>
+            <h2>Invoice Number Validation</h2>
+            <p>Invoice numbers are a critical part of the verification process. Our tool checks that your invoice number follows the proper format and ensures it hasn’t been used before, helping prevent fraudulent or duplicate invoices.</p>
+        </div>
+
+        <!-- Feature 5: Date Verification -->
+        <div class="feature-box">
+            <div class="feature-icon">📅</div>
+            <h2>Date Verification</h2>
+            <p>We check the date on the invoice to ensure it’s valid. Our system verifies that the date on the invoice is not in the future and meets the necessary criteria for validity. If it’s not valid, you will be alerted instantly.</p>
+        </div>
+
+        <!-- Feature 6: Invoice Format Checking -->
+        <div class="feature-box">
+            <div class="feature-icon">📝</div>
+            <h2>Invoice Format Checking</h2>
+            <p>The tool also checks if the invoice follows a proper format (e.g., “INV” followed by numbers). A correctly formatted invoice helps prevent fraud and ensures compliance with business standards.</p>
+        </div>
+
+        <!-- Back to Homepage Button -->
+        <a href="home.html" class="back-button">Back to Homepage</a>
+
+        <!-- Call to Action Button -->
+        <a href="invoice-form.html" class="cta-button">Try it Now!</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Invoice Detection Tool | All rights reserved</p>
+    </footer>
+</body>
+</html>

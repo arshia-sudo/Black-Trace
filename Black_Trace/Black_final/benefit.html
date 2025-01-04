@@ -1,0 +1,253 @@
+benefit.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - Fake Invoice Detection Tool</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #3e015a, #000508);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #230121;
+            color: rgb(225, 216, 226);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 42px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0d0000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .container {
+            flex: 1;
+            width: 100%;
+            max-width: 850px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 30px auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .benefit-title {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            color: magenta;
+        }
+
+        .benefit-item {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #330637;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-item h2 {
+            font-size: 22px;
+            color: #f1ecf0;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            padding: 14px 35px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .cta-button:active {
+            background-color: #388e3c;
+            transform: scale(1);
+        }
+
+        .cta-button:focus {
+            outline: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #050404;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .benefit-item h2 {
+                font-size: 20px;
+            }
+
+            .benefit-item p {
+                font-size: 15px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        Fake Invoice Detection Tool
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="feature.html">Features</a></li>
+            <li><a href="benefit.html">Benefits</a></li>
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="organization.html">Organizations</a></li>
+            <li><a href="registration.html">Register</a></li> <!-- Register link added here -->
+        </ul>
+    </nav>
+
+    <!-- Benefits Section -->
+    <div class="container">
+        <h1>Benefits of Using Our Fake Invoice Detection Tool</h1>
+
+        <p class="benefit-title">Why Choose Our Tool?</p>
+
+        <!-- Benefit 1: Financial Savings -->
+        <div class="benefit-item">
+            <h2>Financial Savings</h2>
+            <p>Fake invoices can lead to financial losses. Our tool helps detect fraudulent invoices before any payments are made, preventing unnecessary expenses and safeguarding your business’s bottom line.</p>
+        </div>
+
+        <!-- Benefit 2: Time Efficiency -->
+        <div class="benefit-item">
+            <h2>Time Efficiency</h2>
+            <p>Manual invoice checks are time-consuming. With our tool, you get instant validation of invoices, freeing up valuable time for your team to focus on more critical tasks.</p>
+        </div>
+
+        <!-- Benefit 3: Improved Security -->
+        <div class="benefit-item">
+            <h2>Improved Security</h2>
+            <p>Our tool ensures that every invoice is authentic, reducing the risk of fraud and protecting your financial data. With advanced algorithms, we provide the highest level of security against fake invoices.</p>
+        </div>
+
+        <!-- Benefit 4: Enhanced Compliance -->
+        <div class="benefit-item">
+            <h2>Enhanced Compliance</h2>
+            <p>Stay compliant with regulatory standards. Our system checks invoices for proper format, dates, and details, ensuring that your invoices meet legal and business requirements at all times.</p>
+        </div>
+
+        <!-- Benefit 5: Peace of Mind -->
+        <div class="benefit-item">
+            <h2>Peace of Mind</h2>
+            <p>Worrying about invoice fraud can disrupt your business operations. With our tool, you can rest easy knowing your invoices are being monitored and verified automatically for any discrepancies or fraud.</p>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <a href="invoice-form.html">
+            <button class="cta-button">Try It Now for Free!</button>
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Fake Invoice Detection. All rights reserved by Ayushi, Arshia, Jannat, Tanmay, Kruthika, Sakshi.</p>
+        <p>Need help? <a href="contact.html">Contact us</a></p>
+    </footer>
+
+</body>
+</html>

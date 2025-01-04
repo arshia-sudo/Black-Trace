@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Detection - Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: #eaeaea;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #a78bfa;
+        }
+
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .pricing-plan {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .pricing-plan h2 {
+            font-size: 28px;
+            color: #a78bfa;
+        }
+
+        .pricing-plan .price {
+            font-size: 36px;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        .pricing-plan .price span {
+            font-size: 20px;
+        }
+
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-plan ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #c9c9c9;
+        }
+
+        .cta-button, .try-now-button, .go-homepage-button {
+            padding: 12px 25px;
+            background-color: #6d28d9;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .cta-button:hover, .try-now-button:hover, .go-homepage-button:hover {
+            background-color: #7c3aed;
+        }
+
+        .features-comparison {
+            margin-top: 50px;
+            background-color: #2d2d2d;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .features-comparison h2 {
+            font-size: 28px;
+            color: #a78bfa;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            color: #eaeaea;
+        }
+
+        th {
+            background-color: #3d3d3d;
+        }
+
+        td {
+            background-color: #2d2d2d;
+        }
+
+        .discounts {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .discounts h2 {
+            font-size: 28px;
+            color: #a78bfa;
+            margin-bottom: 20px;
+        }
+
+        .discount-card {
+            display: inline-block;
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .discount-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .discount-card h3 {
+            font-size: 24px;
+            color: #a78bfa;
+        }
+
+        .discount-card p {
+            font-size: 18px;
+            color: #c9c9c9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pricing Plans</h1>
+
+        <!-- Pricing Plans -->
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <h2>Basic Plan</h2>
+                <div class="price">$19.99 <span>/ month</span></div>
+                <ul>
+                    <li>Up to 100 invoices per month</li>
+                    <li>Basic Validation</li>
+                    <li>Email Support</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+                <a href="#" class="try-now-button">Try Now</a>
+            </div>
+
+            <div class="pricing-plan">
+                <h2>Pro Plan</h2>
+                <div class="price">$49.99 <span>/ month</span></div>
+                <ul>
+                    <li>Up to 500 invoices per month</li>
+                    <li>Advanced Validation</li>
+                    <li>Priority Email Support</li>
+                    <li>Real-Time Alerts</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+                <a href="#" class="try-now-button">Try Now</a>
+            </div>
+
+            <div class="pricing-plan">
+                <h2>Enterprise Plan</h2>
+                <div class="price">$99.99 <span>/ month</span></div>
+                <ul>
+                    <li>Unlimited invoices</li>
+                    <li>All Advanced Features</li>
+                    <li>24/7 Support</li>
+                    <li>Dedicated Account Manager</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+                <a href="#" class="try-now-button">Try Now</a>
+            </div>
+        </div>
+
+        <!-- Features Comparison -->
+        <div class="features-comparison">
+            <h2>Features Comparison</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Basic Plan</th>
+                    <th>Pro Plan</th>
+                    <th>Enterprise Plan</th>
+                </tr>
+                <tr>
+                    <td>Invoices per Month</td>
+                    <td>100</td>
+                    <td>500</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Validation Type</td>
+                    <td>Basic</td>
+                    <td>Advanced</td>
+                    <td>All Features</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Email Support</td>
+                    <td>Priority Email Support</td>
+                    <td>24/7 Support</td>
+                </tr>
+                <tr>
+                    <td>Real-Time Alerts</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Account Manager</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Discounts -->
+        <div class="discounts">
+            <h2>Special Discounts</h2>
+            <div class="discount-card">
+                <h3>10% Off</h3>
+                <p>Get 10% off for the first 3 months on any plan. Use code: <strong>FIRST10</strong></p>
+            </div>
+            <div class="discount-card">
+                <h3>15% Off</h3>
+                <p>Subscribe to the annual plan and save 15%. Use code: <strong>YEAR15</strong></p>
+            </div>
+            <div class="discount-card">
+                <h3>20% Off</h3>
+                <p>Get 20% off for non-profit organizations. Use code: <strong>NONPROFIT20</strong></p>
+            </div>
+        </div>
+
+        <!-- Go to Homepage Button -->
+        <a href="home.html" class="go-homepage-button">Go to Homepage</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Invoice Detection Tool | All rights reserved</p>
+    </footer>
+</body>
+</html>
